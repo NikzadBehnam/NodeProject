@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const rootDir = require("./util/path");
+app.use(express.static(path.join(rootDir, "public")));
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
