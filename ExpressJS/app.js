@@ -18,7 +18,9 @@ app.use("/admin", adminData.routes);
 app.use("/", shopData.routes);
 
 app.use((req, res, next) => {
-  res.render("404", { message: "Page not found !", docTitle: "404" });
+  res
+    .status(404)
+    .render("404", { message: "Page not found!", pageTitle: "404" });
 });
 
 app.listen(3000);

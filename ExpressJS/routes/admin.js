@@ -8,7 +8,7 @@ const rootDir = require("../util/path");
 
 // admin/add-product => POST
 router.get("/add-product", (req, res, next) => {
-  res.render("add-product", { docTitle: "Add product" });
+  res.render("add-product", { pageTitle: "Add product" });
 });
 
 // admin/add-product => POST
