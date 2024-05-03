@@ -7,8 +7,7 @@ const roodDir = require("../util/path");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  console.log(adminData.products);
-  res.sendFile(path.join(roodDir, "views", "shop.html"));
+  res.render("shop");
 });
 
 exports.routes = router;
